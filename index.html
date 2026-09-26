@@ -1,25 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/style.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenvix | Premium Cyber Hardware</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="aura-bg">
+      <div class="aura-layer-1" aria-hidden="true"></div>
+      <div class="aura-layer-2" aria-hidden="true"></div>
+      <div class="aura-layer-3" aria-hidden="true"></div>
 
+      <div class="content-wrapper">
+        <header>
+          <nav class="navbar">
+            <div class="logo"><i class="fa-solid fa-cube"></i> ZENVIX</div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+              <div class="cart-icon" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-badge" id="cartCount">0</span>
+              </div>
+              <div class="menu-toggle" id="mobileMenu">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </nav>
+        </header>
 
-    <div class="section">
-  <div class="top-border left"></div>
-  <div class="top-border right"></div>
-  <h1>CONTACT US</h1>
-  <p>At <b>SWIFT CART </b>your satisfaction is at the heart of everything we do. Whether you are looking for more details about a product, need assistance placing an order, want to track an existing shipment, or simply want to share your shopping experience with us, our dedicated customer support team is ready to assist you.</p>
-    <a href="#">CONTACT US</a>
-</div>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+          <div class="hero-container">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <i class="fa-solid fa-bolt"></i> Cyber Gear Series
+              </div>
+              <h1>Minimal Gear. <span>Maximum Speed.</span></h1>
+              <p>
+                High-performance mechanical keyboards, studio audio, and
+                precision gear crafted for elite creators and coders.
+              </p>
+              <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">
+                  Explore Store <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-secondary">About Zenvix</a>
+              </div>
+            </div>
+            <div class="hero-image-card">
+              <div class="glass-card main-hero-card">
+                <span class="card-tag">Flagship Item</span>
+                <img
+                  src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+                  alt="Zenvix Cyber Keyboard"
+                />
+                <div class="hero-card-details">
+                  <h3>Zenvix Pro RGB Keyboard</h3>
+                  <div class="price-row">
+                    <span class="price">$189.00</span>
+                    <button
+                      class="add-to-cart-btn"
+                      onclick="addToCart('Zenvix Pro RGB', 189.0)"
+                    >
+                      <i class="fa-solid fa-cart-plus"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+          <div class="section-header">
+            <h2>Featured <span>Collection</span></h2>
+            <p>
+              Handcrafted gear built for ultra-clean aesthetics and peak
+              performance.
+            </p>
+          </div>
 
-</body>
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">
+              All Items
+            </button>
+            <button class="filter-btn" data-filter="keyboards">
+              Keyboards
+            </button>
+            <button class="filter-btn" data-filter="audio">Audio</button>
+            <button class="filter-btn" data-filter="accessories">
+              Accessories
+            </button>
+          </div>
+
+          <div class="products-grid">
+            <div class="product-card glass-card" data-category="keyboards">
+              <div class="badge">Bestseller</div>
+              <img
+                src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&q=80"
+                alt="Zenvix Keyboard"
+              />
+              <div class="product-info">
+                <span class="category">Keyboard</span>
+                <h3>Zenvix Vortex 75% Custom</h3>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-footer">
+                  <span class="price">$149.00</span>
+                  <button
+                    class="btn-icon"
+                    onclick="addToCart('Vortex 75% Custom', 149.0)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card glass-card" data-category="audio">
+              <div class="badge">New</div>
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                alt="Headphones"
+              />
+              <div class="product-info">
+                <span class="category">Audio</span>
+                <h3>Zenvix Acoustic Studio Pro</h3>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="product-footer">
+                  <span class="price">$229.00</span>
+                  <button
+                    class="btn-icon"
+                    onclick="addToCart('Acoustic Studio Pro', 229.0)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card glass-card" data-category="accessories">
+              <img
+                src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80"
+                alt="Cyber Mouse"
+              />
+              <div class="product-info">
+                <span class="category">Accessories</span>
+                <h3>Zenvix Precision Wireless Mouse</h3>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-footer">
+                  <span class="price">$79.99</span>
+                  <button
+                    class="btn-icon"
+                    onclick="addToCart('Precision Wireless Mouse', 79.99)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card glass-card" data-category="accessories">
+              <div class="badge">Hot</div>
+              <img
+                src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80"
+                alt="Desk Mat"
+              />
+              <div class="product-info">
+                <span class="category">Accessories</span>
+                <h3>Zenvix Phantom Desk Mat XL</h3>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="product-footer">
+                  <span class="price">$34.99</span>
+                  <button
+                    class="btn-icon"
+                    onclick="addToCart('Phantom Desk Mat XL', 34.99)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+          <div class="about-content glass-card">
+            <h2>About <span>ZENVIX</span></h2>
+            <p>
+              Zenvix crafts premium hardware designed for programmers, gamers,
+              and digital creators. We focus on ergonomic precision, sleek
+              dark-aesthetic setups, and uncompromising build quality.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+          <div class="section-header">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Have questions or custom requirements? Send us a message.</p>
+          </div>
+          <div class="contact-container glass-card">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Detailed Expanded Footer -->
+        <footer>
+          <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col brand-col">
+              <div class="logo"><i class="fa-solid fa-cube"></i> ZENVIX</div>
+              <p>
+                Next-generation hardware for minimalist desk setups and
+                high-speed workflows.
+              </p>
+              <div class="trust-badges">
+                <span><i class="fa-solid fa-truck-fast"></i> </span>
+                <span><i class="fa-solid fa-shield-halved"></i> </span>
+              </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#products">Products Collection</a></li>
+                <li><a href="#about">About Zenvix</a></li>
+                <li><a href="#contact">Contact Support</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Customer Care -->
+            <div class="footer-col">
+              <h4>Customer Care</h4>
+              <ul>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Warranty Policy</a></li>
+                <li><a href="#">Privacy Terms</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Payments -->
+            <div class="footer-col newsletter-col">
+              <h4>Stay Updated</h4>
+              <p>Subscribe for exclusive product drops and offers.</p>
+              <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Enter email" required />
+                <button type="submit" class="btn-subscribe">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <div class="social-icons">
+                <a href="#" aria-label="Github"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="fa-brands fa-discord"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 Zenvix Inc. All rights reserved.</p>
+            <div class="payment-icons">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-apple-pay"></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">Item added to cart!</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
